@@ -1,0 +1,56 @@
+[
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "cart",
+        "description": "cart",
+        "peekOfCode": "class Product:\n    def __init__(self, name, price, quantity):\n        if quantity < 0:\n            raise ValueError(\"Quantity cannot be negative\")\n        self.name = name\n        self.price = price\n        self.quantity = quantity\n    def calculate_price(self):\n        return self.price * self.quantity\nclass ShoppingCart:",
+        "detail": "cart",
+        "documentation": {}
+    },
+    {
+        "label": "ShoppingCart",
+        "kind": 6,
+        "importPath": "cart",
+        "description": "cart",
+        "peekOfCode": "class ShoppingCart:\n    def __init__(self):\n        self.cart = []\n    def add_product(self, product):\n        self.cart.append(product)\n    def get_cart_total(self):\n        total = 0\n        for product in self.cart:\n            total += product.calculate_price()\n        return total",
+        "detail": "cart",
+        "documentation": {}
+    },
+    {
+        "label": "TestShoppingCart",
+        "kind": 6,
+        "importPath": "cart",
+        "description": "cart",
+        "peekOfCode": "class TestShoppingCart(unittest.TestCase):\n    def test_empty_cart(self):\n        # Create an empty shopping cart\n        cart = ShoppingCart()\n        # Check if the total price in an empty cart is 0\n        self.assertEqual(cart.get_cart_total(), 0)\n    def test_cart_with_products(self):\n        # Create a shopping cart with products\n        cart = ShoppingCart()\n        product1 = Product(\"Laptop\", 20.0, 1)",
+        "detail": "cart",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "product",
+        "description": "product",
+        "peekOfCode": "class Product:\n    def __init__(self, name, price, quantity):\n        self.name = name\n        self.price = price\n        self.quantity = quantity\n    def total_price(self):\n        if self.quantity<0:\n            raise ValueError()\n        return self.price * self.quantity\nimport unittest",
+        "detail": "product",
+        "documentation": {}
+    },
+    {
+        "label": "TestProduct",
+        "kind": 6,
+        "importPath": "product",
+        "description": "product",
+        "peekOfCode": "class TestProduct(unittest.TestCase):\n    def setUp(self):\n        self.product = Product(\"Laptop\", 999.99, 5)\n    def test_attributes(self):\n        self.assertEqual(self.product.name, \"Laptop\")\n        self.assertEqual(self.product.price, 999.99)\n        self.assertEqual(self.product.quantity, 5)\n    def test_total_price(self):\n        self.assertEqual(self.product.total_price(), 999.99 * 5)\n    def test_total_price_zero_quantity(self):",
+        "detail": "product",
+        "documentation": {}
+    }
+]
