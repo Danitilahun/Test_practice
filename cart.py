@@ -22,7 +22,6 @@ class ShoppingCart:
 
     def get_cart_total(self):
         total = 0
-        print(total)
         for product in self.cart:
             total += product.calculate_price()
             
