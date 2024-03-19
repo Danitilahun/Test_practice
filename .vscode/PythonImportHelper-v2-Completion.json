@@ -22,7 +22,7 @@
         "kind": 6,
         "importPath": "cart",
         "description": "cart",
-        "peekOfCode": "class ShoppingCart:\n    def __init__(self):\n        self.cart = []\n    def add_product(self, product):\n        self.cart.append(product)\n    def get_cart_total(self):\n        total = 0\n        for product in self.cart:\n            total += product.calculate_price()\n        return total",
+        "peekOfCode": "class ShoppingCart:\n    def __init__(self):\n        self.cart = []\n    def add_product(self, product):\n        self.cart.append(product)\n    def get_cart_total(self):\n        total = 0\n        print(total)\n        for product in self.cart:\n            total += product.calculate_price()",
         "detail": "cart",
         "documentation": {}
     },
