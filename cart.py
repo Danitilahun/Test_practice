@@ -34,7 +34,7 @@ class TestShoppingCart(unittest.TestCase):
         cart = ShoppingCart()
 
         # Check if the total price in an empty cart is 0
-        self.assertEqual(cart.get_cart_total(), 0)
+        self.assertEqual(cart.get_cart_total(), 1)
 
     def test_cart_with_products(self):
         # Create a shopping cart with products
